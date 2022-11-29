@@ -42,7 +42,7 @@ public abstract class HorseScreenMixin extends HandledScreen<HorseScreenHandler>
         if (AbstractDonkeyEntity.class.isAssignableFrom(this.entity.getClass()) && ((AbstractDonkeyEntity) this.entity).hasChest()) {
             hasChest = true;
         }
-        DecimalFormat df = new DecimalFormat("#.#");
+        DecimalFormat df = new DecimalFormat("#.###");
         String jumpstrength = df.format(Converter.jumpStrengthToJumpHeight(this.entity.getJumpStrength()));
         String maxHealth = df.format(this.entity.getMaxHealth());
         String speed = df.format(Converter.genericSpeedToBlocPerSec(this.entity.getAttributes().getValue(EntityAttributes.GENERIC_MOVEMENT_SPEED)));
