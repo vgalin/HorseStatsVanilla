@@ -41,7 +41,7 @@ public abstract class HorseEntityMixin extends AbstractHorseEntity {
         
         if (this.world.isClient && !this.isTame() && player.shouldCancelInteraction() && (config == null || config.isTooltipEnabled())) {
             // Show tooltip
-            DecimalFormat df = new DecimalFormat("#.#");
+            DecimalFormat df = new DecimalFormat("#.###");
             String jumpstrength = df.format( Converter.jumpStrengthToJumpHeight(this.getJumpStrength()) );
             String maxHealth = df.format(this.getMaxHealth());
             String speed = df.format(Converter.genericSpeedToBlocPerSec(this.getAttributes().getValue(EntityAttributes.GENERIC_MOVEMENT_SPEED)));         
